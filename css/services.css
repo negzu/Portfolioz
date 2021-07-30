@@ -1,0 +1,207 @@
+*, ::after, ::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  transition: ease-in-out 0.3s;
+  position: relative;
+  height: 100vh;
+  background-color: #1a1a1a;
+  display: grid;
+  grid-template-areas: 1fr 5fr;
+  text-align: start;
+  pointer-events: all;
+}
+.container h1 {
+  line-height: 1;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.container h2 {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  margin-top: 40px;
+  display: block;
+  color: #c1b8b8;
+}
+.container h2 span {
+  border-bottom: 2px solid #D11D27;
+  padding-bottom: 3px;
+}
+.container nav {
+  display: block;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  position: relative;
+}
+.container nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
+}
+.container nav ul li {
+  padding: 10px;
+}
+.container nav ul li a {
+  color: #d0caca;
+  font: "Poppins", sans-serif;
+  text-decoration: none;
+  font-size: 1.2em;
+  display: inline-block;
+  position: relative;
+}
+.container nav ul li a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #D11D27;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.container nav ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  border-width: 0 0 1px 0;
+  box-shadow: 0 0 2px 3px rgba(0, 0, 0, 0.06);
+  position: fixed;
+  z-index: 99;
+  background: black;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  align-items: center;
+  padding-right: 300px;
+}
+nav h1 {
+  color: #fffafa;
+  padding-left: 300px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  padding: 5px;
+}
+nav ul li a {
+  color: #d0caca;
+  font: "Poppins", sans-serif;
+  text-decoration: none;
+  font-size: 1.2em;
+  display: inline;
+  position: relative;
+}
+nav ul li a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #D11D27;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+nav ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.services .icon-box {
+  text-align: center;
+  background: rgba(204, 204, 204, 0.1);
+  padding: 80px 20px;
+  transition: all ease-in-out 0.3s;
+}
+
+.services .icon-box .icon {
+  margin: 0 auto;
+  width: 64px;
+  height: 64px;
+  background: #D11D27;
+  border-radius: 5px;
+  transition: all 0.3s ease-out 0s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transform-style: preserve-3d;
+}
+
+.services .icon-box .icon i {
+  color: #fff;
+  font-size: 28px;
+}
+
+.services .icon-box .icon::before {
+  position: absolute;
+  content: "";
+  left: -8px;
+  top: -8px;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 5px;
+  transition: all 0.3s ease-out 0s;
+  transform: translateZ(-1px);
+}
+
+.services .icon-box h4 {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.services .icon-box h4 a {
+  color: #fff;
+}
+
+.services .icon-box p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.services .icon-box:hover {
+  background: #D11D27;
+  border-color: #D11D27;
+}
+
+.services .icon-box:hover .icon {
+  background: #fff;
+}
+
+.services .icon-box:hover .icon i {
+  color: #D11D27;
+}
+
+.services .icon-box:hover .icon::before {
+  background: #771015;
+}
+
+.services .icon-box:hover h4 a, .services .icon-box:hover p {
+  color: #fff;
+}

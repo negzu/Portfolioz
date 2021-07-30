@@ -1,0 +1,133 @@
+@import "port.scss";
+*, ::after , ::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
+nav{border-width: 0 0 1px 0;
+    box-shadow: 0 0 2px 3px rgb(0 0 0 / 6%);
+    position: fixed;
+    z-index: 99;
+    background: rgb(0, 0, 0);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    padding-right: 300px;
+    
+    h1{
+        color: #fffafa;
+        padding-left: 300px;
+        
+    }
+    ul{
+        list-style:none;
+        display: flex;
+        
+        li{
+            padding: 5px;
+           
+            a{
+                color:#d0caca;
+                font: $fontfamily;
+                text-decoration: none;
+                font-size: 1.2em;
+                display: inline;
+                position: relative;
+                
+                
+                &:after{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    transform: scaleX(0);
+                    height: 2px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: #D11D27;
+                    transform-origin: bottom right;
+                    transition: transform 0.25s ease-out;
+                }
+                &:hover::after{
+                    transform: scaleX(1);
+                     transform-origin: bottom left;
+                     
+                   
+             
+               }
+              
+            }
+        }
+    }  
+}
+
+.container-form{
+   padding-top: 400px;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 350px;
+    background-color: $bgcolor;
+    &::after{
+        background-color: $bgcolor;
+    }
+     
+
+.myForm {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    grid-auto-flow: row dense;
+    grid-gap: .8em;
+    background: rgb(0, 0, 0);
+    padding: 4em;
+    color: white;
+        }
+    h2{
+        display: grid;
+        grid-column: 1/4;
+        
+        &::after{
+            
+            content: "";
+            width: 120px;
+            height: 3px;
+            display: inline-block;
+            background: #A90011;
+            margin: 4px 10px;
+        }
+    } 
+   label  {
+        grid-column: 1;
+        grid-row: auto;
+      }
+      input,
+      button {
+       grid-column: 2;
+       grid-row: auto;
+       padding: 1em;
+       border: none;
+     }
+      textarea {
+        min-height: calc(100% - 2em);
+        width: 100%;
+        border: none;
+       }
+       button {
+        grid-column: 2 / 4; 
+        background: #A90011;
+        color: white;
+        &:hover{
+            background-color: #10096e;
+        }
+       }
+  
+  
+  
+  
+  #comment-box {
+   grid-column: 3;
+   grid-row: span 3;
+  }
+  
+
+}

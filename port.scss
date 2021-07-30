@@ -1,0 +1,100 @@
+$fontfamily:"Poppins", sans-serif;
+$textcolor:white;
+$bgcolor: #1a1a1a;
+*, ::after , ::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
+.container {
+    transition: ease-in-out 0.3s;
+    position: relative;
+    height: 100vh;
+    background-color: $bgcolor;
+    display: grid;
+    grid-template-areas: 1fr 5fr ;
+    text-align:start;
+    pointer-events: all;
+    h1 {
+        line-height: 1;
+        font-weight: 700;
+        font-family: "Poppins", sans-serif;
+        color: $textcolor;
+        grid-column: 2/3;
+        grid-row:2/3;
+        
+    
+      }
+      h2 {
+        font-family: "Poppins", sans-serif;
+        color: $textcolor;
+        grid-column: 2/3;
+        grid-row:2/3;
+        margin-top: 40px;
+        display: block;
+        color: #c1b8b8;
+        
+        span{
+            border-bottom: 2px solid #D11D27;
+            padding-bottom: 3px
+            
+        }
+      }
+      nav{
+          display: block;
+          grid-column: 2/3;
+          grid-row:2/3;
+          position: relative;
+          
+          
+            ul{
+                list-style:none;
+                display: flex;
+                align-items: center;
+                margin-top:80px;
+                li{
+                    padding: 10px;
+                   
+                    a{
+                        color:#d0caca;
+                        font: $fontfamily;
+                        text-decoration: none;
+                        font-size: 1.2em;
+                        display: inline-block;
+                        position: relative;
+                        
+                        
+                        &:after{
+                            content: '';
+                            position: absolute;
+                            width: 100%;
+                            transform: scaleX(0);
+                            height: 2px;
+                            bottom: 0;
+                            left: 0;
+                            background-color: #D11D27;
+                            transform-origin: bottom right;
+                            transition: transform 0.25s ease-out;
+                        }
+                        &:hover::after{
+                            transform: scaleX(1);
+                             transform-origin: bottom left;
+                             
+                           
+                     
+                       }
+                      
+                    }
+                }
+            }
+          
+        
+
+      }
+      
+    
+    
+    }
+
+    
+    

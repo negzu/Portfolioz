@@ -1,0 +1,233 @@
+*, ::after, ::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  transition: ease-in-out 0.3s;
+  position: relative;
+  height: 100vh;
+  background-color: #1a1a1a;
+  display: grid;
+  grid-template-areas: 1fr 5fr;
+  text-align: start;
+  pointer-events: all;
+}
+.container h1 {
+  line-height: 1;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.container h2 {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  margin-top: 40px;
+  display: block;
+  color: #c1b8b8;
+}
+.container h2 span {
+  border-bottom: 2px solid #D11D27;
+  padding-bottom: 3px;
+}
+.container nav {
+  display: block;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  position: relative;
+}
+.container nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
+}
+.container nav ul li {
+  padding: 10px;
+}
+.container nav ul li a {
+  color: #d0caca;
+  font: "Poppins", sans-serif;
+  text-decoration: none;
+  font-size: 1.2em;
+  display: inline-block;
+  position: relative;
+}
+.container nav ul li a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #D11D27;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.container nav ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  border-width: 0 0 1px 0;
+  box-shadow: 0 0 2px 3px rgba(0, 0, 0, 0.06);
+  position: fixed;
+  z-index: 99;
+  background: black;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  align-items: center;
+  padding-right: 300px;
+}
+nav h1 {
+  color: #fffafa;
+  padding-left: 300px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  padding: 5px;
+}
+nav ul li a {
+  color: #d0caca;
+  font: "Poppins", sans-serif;
+  text-decoration: none;
+  font-size: 1.2em;
+  display: inline;
+  position: relative;
+}
+nav ul li a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #D11D27;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+nav ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.about {
+  background-color: #1a1a1a;
+  height: 100vh;
+  padding-top: 90px;
+  padding-left: 40px;
+  color: #eee7e7;
+  display: grid;
+  grid-template-columns: 0.5fr 3fr 0.5fr;
+}
+.about h2::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: #A90011;
+  margin: 4px 10px;
+}
+
+section .acontainer {
+  background-color: black;
+  height: 100%;
+  width: 75%;
+  margin: auto;
+  display: grid;
+  grid-template-areas: auto auto auto;
+  padding-top: 20px;
+}
+section .acontainer h1 {
+  display: grid;
+  grid-column: 1/4 span 4;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  padding-top: 30px;
+  position: fixed;
+}
+section .acontainer h3 {
+  display: grid;
+  grid-column: 2/3;
+  margin-top: 100px;
+  margin-left: 350px;
+  position: fixed;
+  color: #d8d5d5;
+  font-size: 26px;
+  font-family: "Raleway", sans-serif;
+}
+section .acontainer img {
+  height: 200px;
+  width: 200px;
+  grid-row: 1/4;
+  margin-top: 100px;
+  position: fixed;
+}
+section .acontainer .info {
+  display: grid;
+  grid-column: 2/3;
+  text-align: justify;
+  margin-top: 170px;
+}
+section .acontainer .info ul {
+  list-style: none;
+}
+section .acontainer .info ul li {
+  font-size: 20px;
+  padding: 20px;
+  padding-left: 170px;
+}
+section .acontainer .info ul li::before {
+  content: ">";
+  color: #A90011;
+  padding-right: 10px;
+}
+section .acontainer .info2 {
+  display: grid;
+  grid-column: 3/4;
+  text-align: justify;
+}
+section .acontainer .grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 50px;
+  grid-gap: 20px 20px;
+  grid-row: 2/4;
+  grid-column: 1/4;
+}
+section .acontainer .grid-item {
+  background-color: #2B2B2B;
+  border: 1px solid black;
+  color: white;
+  padding: 2px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section .acontainer .grid-item:hover {
+  background-color: #A90011;
+  transform: scale(1.1);
+}

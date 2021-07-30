@@ -1,0 +1,190 @@
+@import "port.scss";
+*, ::after , ::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
+nav{border-width: 0 0 1px 0;
+    box-shadow: 0 0 2px 3px rgb(0 0 0 / 6%);
+    position: fixed;
+    z-index: 99;
+    background: rgb(0, 0, 0);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    padding-right: 300px;
+    
+    h1{
+        color: #fffafa;
+        padding-left: 300px;
+        
+    }
+    ul{
+        list-style:none;
+        display: flex;
+        
+        li{
+            padding: 5px;
+           
+            a{
+                color:#d0caca;
+                font: $fontfamily;
+                text-decoration: none;
+                font-size: 1.2em;
+                display: inline;
+                position: relative;
+                
+                
+                &:after{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    transform: scaleX(0);
+                    height: 2px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: #D11D27;
+                    transform-origin: bottom right;
+                    transition: transform 0.25s ease-out;
+                }
+                &:hover::after{
+                    transform: scaleX(1);
+                     transform-origin: bottom left;
+                     
+                   
+             
+               }
+              
+            }
+        }
+    }  
+}
+.about{
+    background-color: $bgcolor;
+    height: 100vh;
+    padding-top: 90px;
+    padding-left:40px;
+    color: #eee7e7;
+    display: grid;
+    grid-template-columns: .5fr 3fr .5fr;
+    
+    h2{
+        
+        
+        &::after{
+            content: "";
+            width: 120px;
+            height: 1px;
+            display: inline-block;
+            background: #A90011;
+            margin: 4px 10px;
+        }
+    }   
+}
+section{
+    .acontainer{
+        background-color: black;
+        height: 100%;
+        width: 75%;
+        margin: auto;
+        display: grid;
+        grid-template-areas: auto auto auto;
+        padding-top: 20px;
+       
+
+        h1{
+            display: grid;
+            grid-column: 1/4 span 4;
+            font-size: 36px;
+            font-weight: 700;
+             text-transform: uppercase;
+            font-family: "Poppins", sans-serif;
+            color: #fff;
+            padding-top: 30px;
+            position: fixed;
+            }
+            
+        h3{
+            display: grid;
+            grid-column: 2/3;
+            margin-top: 100px;
+            margin-left: 350px;
+            position: fixed;
+            color: rgb(216, 213, 213);
+            font-size: 26px;
+            font-family: "Raleway", sans-serif;
+            
+           
+          
+
+        }
+        img{
+            height: 200px;
+            width: 200px;
+            grid-row:1/4;
+            margin-top: 100px;
+            position: fixed;
+        }
+        .info{
+            display: grid;
+            grid-column: 2/3;
+            text-align: justify;
+            margin-top: 170px;
+            ul{
+                list-style: none;
+                li{
+                    font-size: 20px;
+                    padding: 20px;
+                    padding-left:170px;
+                    
+                    &::before{
+                        content: ">"; color:#A90011;
+                        padding-right: 10px;
+                    }
+                
+                }
+            }
+            
+        }
+        .info2{
+            display: grid;
+            grid-column: 3/4;
+            text-align: justify;
+            
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            padding: 50px;
+            grid-gap: 20px 20px;
+            grid-row: 2/4;
+            grid-column: 1/4;
+           
+           
+          }
+          .grid-item {
+            background-color: #2B2B2B;
+            border: 1px solid black ;
+            color:white;
+            padding: 2px;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover{
+                background-color:#A90011 ;
+                transform:scale(1.1);
+                
+            }
+            
+            
+          }
+          
+        
+    }
+    
+
+}

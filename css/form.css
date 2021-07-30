@@ -1,0 +1,191 @@
+*, ::after, ::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  transition: ease-in-out 0.3s;
+  position: relative;
+  height: 100vh;
+  background-color: #1a1a1a;
+  display: grid;
+  grid-template-areas: 1fr 5fr;
+  text-align: start;
+  pointer-events: all;
+}
+.container h1 {
+  line-height: 1;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.container h2 {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  margin-top: 40px;
+  display: block;
+  color: #c1b8b8;
+}
+.container h2 span {
+  border-bottom: 2px solid #D11D27;
+  padding-bottom: 3px;
+}
+.container nav {
+  display: block;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  position: relative;
+}
+.container nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
+}
+.container nav ul li {
+  padding: 10px;
+}
+.container nav ul li a {
+  color: #d0caca;
+  font: "Poppins", sans-serif;
+  text-decoration: none;
+  font-size: 1.2em;
+  display: inline-block;
+  position: relative;
+}
+.container nav ul li a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #D11D27;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.container nav ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  border-width: 0 0 1px 0;
+  box-shadow: 0 0 2px 3px rgba(0, 0, 0, 0.06);
+  position: fixed;
+  z-index: 99;
+  background: black;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  align-items: center;
+  padding-right: 300px;
+}
+nav h1 {
+  color: #fffafa;
+  padding-left: 300px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  padding: 5px;
+}
+nav ul li a {
+  color: #d0caca;
+  font: "Poppins", sans-serif;
+  text-decoration: none;
+  font-size: 1.2em;
+  display: inline;
+  position: relative;
+}
+nav ul li a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #D11D27;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+nav ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.container-form {
+  padding-top: 400px;
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-bottom: 350px;
+  background-color: #1a1a1a;
+}
+.container-form::after {
+  background-color: #1a1a1a;
+}
+.container-form .myForm {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  grid-auto-flow: row dense;
+  grid-gap: 0.8em;
+  background: black;
+  padding: 4em;
+  color: white;
+}
+.container-form h2 {
+  display: grid;
+  grid-column: 1/4;
+}
+.container-form h2::after {
+  content: "";
+  width: 120px;
+  height: 3px;
+  display: inline-block;
+  background: #A90011;
+  margin: 4px 10px;
+}
+.container-form label {
+  grid-column: 1;
+  grid-row: auto;
+}
+.container-form input,
+.container-form button {
+  grid-column: 2;
+  grid-row: auto;
+  padding: 1em;
+  border: none;
+}
+.container-form textarea {
+  min-height: calc(100% - 2em);
+  width: 100%;
+  border: none;
+}
+.container-form button {
+  grid-column: 2/4;
+  background: #A90011;
+  color: white;
+}
+.container-form button:hover {
+  background-color: #10096e;
+}
+.container-form #comment-box {
+  grid-column: 3;
+  grid-row: span 3;
+}
